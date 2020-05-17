@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+
+@font-face {
+  font-family: "canterbold";
+  src: url("canter-bold-webfont.woff2") format("woff2");
+  src: url("canter-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "canterbold_shadow";
+  src: url("canter-boldshadow-webfont.woff2") format("woff2");
+  src: url("canter-boldshadow-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.wrapper {
+  background: #2f343a;
+  overflow: auto;
+}
+.wrapper .flex-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1170px;
+}
+.wrapper .flex-container header {
+  background: url("../img/town-projector.jpg");
+  font-family: "Comfortaa", cursive;
+  color: #f1ede1;
+  height: 1027px;
+}
+.wrapper .flex-container header .text-container {
+  width: 1000px;
+  height: 300px;
+  margin-left: 10%;
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.wrapper .flex-container header .text-container .text-container-main p {
+  font-size: 120px;
+  text-align: left;
+  line-height: 100px;
+}
+.wrapper .flex-container header .text-container .text-container-main p:nth-child(2) {
+  font-size: 80px;
+}
+.wrapper .flex-container header .text-container .text-container-main p:nth-child(3) {
+  margin-top: 300px;
+  font-size: 30px;
+  line-height: 35px;
+}
+.wrapper .flex-container header .text-container .text-container-language {
+  width: 250px;
+  font-size: 25px;
+  line-height: 1.5em;
+}
+.wrapper .flex-container header .text-container .text-container-language p {
+  text-align: center;
+  color: white;
+}
+.wrapper .flex-container header .text-container .text-container-language p:nth-of-type(2), .wrapper .flex-container header .text-container .text-container-language p:nth-of-type(3) {
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 5px;
+}
+.wrapper .flex-container header .text-container .text-container-language p:nth-of-type(2).selected, .wrapper .flex-container header .text-container .text-container-language p:nth-of-type(3).selected {
+  color: black;
+  background: white;
+}
+.wrapper .flex-container main {
+  background: url(../img/section_bg.jpg);
+  font-family: "Comfortaa", cursive;
+  position: relative;
+}
+.wrapper .flex-container main p {
+  text-align: center;
+  font-size: 52px;
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+.wrapper .flex-container main .joinus-container {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.wrapper .flex-container main .joinus-container .price {
+  width: 370px;
+  height: 220px;
+  background: url("../img/lines.jpg");
+  margin: 0 auto;
+  border: 1px solid #e5dec5;
+  position: relative;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .flex-container main .joinus-container .price p {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-style: italic;
+  color: grey;
+  border-left: 1px solid #fad6d5;
+  padding-left: 5px;
+  text-transform: none;
+}
+.wrapper .flex-container main .adress-container {
+  display: flex;
+  width: 400px;
+  height: 97px;
+  margin: 0 auto;
+  margin-top: 52px;
+}
+.wrapper .flex-container main .adress-container div img {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+.wrapper .flex-container main .adress-container div p {
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  font-size: 35px;
+  font-style: italic;
+  line-height: 40px;
+  text-transform: none;
+  text-align: left;
+}
+.wrapper .flex-container main .adress-container div .img-container {
+  display: flex;
+  justify-content: center;
+}
+.wrapper .flex-container main .adress-container div .img-container img {
+  height: 50px;
+  width: auto;
+}
+.wrapper .flex-container footer {
+  padding-top: 100px;
+  background: url("../img/section_bg.jpg");
+  display: flex;
+  align-items: center;
+}
+.wrapper .flex-container footer p {
+  margin: auto;
+  font-size: 22px;
+  font-family: "Comfortaa", cursive;
+}
+.wrapper .flex-container footer img {
+  height: 200px;
+  width: auto;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper .flex-container header .text-container {
+    margin-left: 1%;
+  }
+}
+@media screen and (max-width: 1028px) {
+  .wrapper .flex-container header .text-container {
+    margin-left: 1%;
+    grid-template-columns: 2fr 1fr;
+  }
+  .wrapper .flex-container header .text-container .text-container-main p {
+    font-size: 100px;
+  }
+  .wrapper .flex-container header .text-container .text-container-main p:nth-child(2) {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 962px) {
+  .wrapper .flex-container header .text-container {
+    margin-top: 40px;
+    margin-left: 1%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+  }
+  .wrapper .flex-container header .text-container .text-container-main {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .wrapper .flex-container header .text-container .text-container-main p {
+    font-size: 80px;
+  }
+  .wrapper .flex-container header .text-container .text-container-language {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .wrapper .flex-container main p {
+    text-align: left;
+    font-size: 42px;
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+  .wrapper .flex-container main .joinus-container .price {
+    margin-left: 5%;
+  }
+  .wrapper .flex-container main .adress-container {
+    margin-left: 5%;
+  }
+  .wrapper .flex-container footer img {
+    height: 180px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
