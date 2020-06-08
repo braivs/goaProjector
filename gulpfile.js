@@ -40,7 +40,7 @@ gulp.task('reload-html', function() {
 
 gulp.task('default', function(){
 	gulp.watch('source/sass/*.sass', gulp.series('sass-compile'))
-	gulp.watch('source/*.pug', gulp.series('pug'))
+	gulp.watch('source/**/*.pug', gulp.series('pug'))
 	livereload.listen()
 	gulp.watch('docs/css/*.css', gulp.series('reload-css'))
 	gulp.watch('docs/*.html', gulp.series('reload-html'))
